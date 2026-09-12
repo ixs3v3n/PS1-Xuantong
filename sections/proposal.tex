@@ -1,50 +1,39 @@
 \section{Three connected research questions}
-Start from Intellectual Statement II. State the background, motivation, application, affected stakeholders, and strategic tension. Explain your proposal's relationship to a Nobel-recognized foundation and current research.
-
-\textbf{Q1---Economics:} [Which incentive, welfare, allocation, or institutional question needs an answer?]\par
-\textbf{Q2---Computation:} [Which model, algorithm, or evaluation makes the answer checkable?]\par
-\textbf{Q3---Behavior:} [Which belief, preference, reasoning limit, or learning mechanism could alter the prediction?]
-
-Explain why the answers depend on one another. Cite relevant economics, computer-science, and behavioral-science papers. Refer to Figure~\ref{fig:teaser} and explain how its mechanism connects your questions.
+Digital markets let strangers transact despite incomplete information, but the same platform design that improves trust may also shape who receives scarce opportunities. Building on reputation research~\cite{tadelis2016,zloteanu2018}, I study the joint effects of reputation information, platform rules, and income uncertainty. \textbf{Q1---Economics:} How does income uncertainty affect consumers' ability to benefit from apparently open digital-market access? \textbf{Q2---Computation:} Which combinations of platform rules and reputation signals reduce speculative crowding while preserving access for genuine consumers? \textbf{Q3---Behavior:} How does the amount and visibility of reputation information change trust and willingness to transact under financial uncertainty? The questions are interdependent: behavioral responses determine demand, economics evaluates allocation and welfare, and computation makes alternative mechanisms comparable at scale (Fig.~\ref{fig:teaser}).
 
 \section{Answer to Q1: incentives and intellectual lineage}
-State a provisional answer or falsifiable hypothesis. Define players, actions versus strategies, payoffs, timing, and information. Name the solution concept and cite its defining paper, such as Nash~\cite{nash1950} or Bayesian equilibrium~\cite{harsanyi1968}. State what the benchmark establishes and what it leaves unresolved. Distinguish hypothetical, observed, estimated, and inherited quantities.
+I inherit from Tadelis~\cite{tadelis2016} the economic role of reputation in reducing information frictions between strangers. I extend this framework by treating financial capacity as a second source of uncertainty: consumers may have market access without having the liquidity to use it. My hypothesis is that income uncertainty tightens participation constraints and can shift scarce goods toward financially secure or speculative buyers even when transaction costs are low. The economic outcome is therefore not only trade, but the distribution of opportunities and surplus across buyer types. This creates a tension with the usual efficiency goal: a rule can improve allocation or transaction completion while making access less equitable.
 
 \section{Answer to Q2: method and evaluation}
-Explain the computational part of Figure~\ref{fig:teaser}: inputs, algorithm, baseline, metric, and a meaningful mathematical or computational check. Specify your smallest feasible experiment and one modification to the baseline. State the actual outputs obtained; label every untested outcome as expected or planned. Your Colab notebook and interactive game must explain the same research question and identify any differences in model or scope.
+I represent the market with heterogeneous buyer agents competing for scarce goods. The baseline compares two institutional rules---\emph{refundable but non-transferable} versus \emph{transferable but non-refundable}---while varying demand, scarcity, speculative participation, income uncertainty, and reputation-signal reliability/visibility. The model records purchase probability, speculative activity, buyer surplus, and access by financially constrained versus unconstrained consumers. A smallest factorial check compares the two rules under low/high demand and low/high speculation; a meaningful extension varies reputation visibility. The computational goal is not to predict a real platform from synthetic data, but to make the mechanism transparent, reproducible, and falsifiable. Actual outputs will be reported only from the verified notebook; other outcomes remain planned.
 
-\clearpage\balance
 \section{Answer to Q3: behavior and competing explanations}
-Identify a behavioral mechanism and a competing explanation. Describe evidence that would discriminate between them. Explain how this changes the economic model or computational design. State the limits of what the planned evidence can identify. Synthetic or simulated results do not establish human or real AI behavior. Include a feasible next test and what finding would change your mind.
-
+I inherit from Zloteanu et al.~\cite{zloteanu2018} the finding that trust and reputation information influence judgments of unfamiliar users. I advance it by testing whether information affects \emph{action}, not only judgment, when financial constraints are present. One hypothesis is a non-linear trust response: insufficient reputation information may suppress transactions, while highly salient positive reputation may encourage heuristic reliance and speculative bidding. A competing explanation is a liquidity channel in which income risk lowers willingness to pay regardless of reputation. A discriminating experiment varies reputation visibility while holding seller quality fixed and compares high- and low-income-risk buyers. The proposed evidence cannot establish population-level causal effects without larger human-subject or field data.
 
 \section{Advanced development and future directions}
-Build on a named Nobel laureate's defining work and cite the award record. Identify an enduring human question---such as cooperation, fairness, trust or collective choice---and explain what the foundation establishes. Add a relevant Turing Award foundation where it clarifies the computational lineage.
+The long-run contribution is a design framework for trustworthy and equitable digital markets that integrates behavioral responses, economic participation constraints, and computational mechanism design. Akerlof's Nobel-recognized work establishes why information asymmetry can undermine exchange~\cite{akerlof1970,nobel_akerlof}; Simon's bounded-rationality work and Turing Award recognize decision-making and computational perspectives~\cite{simon1955,simon1978,simon_turing}. I retain their enduring questions of trust and rational decision-making but advance the boundary to platforms where algorithms control information visibility and transaction rules at scale. The key synthesis is that improving trust is not sufficient if the same information or rules concentrate opportunities.
 
-Explain what is distinctive about today's environment and technology, what current research leaves unresolved, and how your proposal advances that boundary. State the economic, computational and behavioral contributions and the new insight their integration makes possible.
-
-\begin{table}[h]\caption{From laureate foundations to a new interdisciplinary contribution.}
-\begin{tabularx}{\columnwidth}{@{}p{1.6cm}Y@{}}\toprule
+\begin{table}[h]
+\caption{Roadmap from foundations to the 2056 contribution.}
+\begin{tabularx}{\columnwidth}{@{}p{1.45cm}Y@{}}\toprule
 \textbf{Horizon}&\textbf{Milestone and evidence}\\\midrule
-Foundation&[Laureate, defining work, enduring question and retained insight.]\\
-PS1&[Current-era setting, working baseline and meaningful check.]\\
-Next study&[New interdisciplinary explanation or design; a discriminating test.]\\
-Longer term&[Broader validation, benefits and reusable knowledge or tools.]\\
-2056&[Integrated contribution and evidence connecting it to the ambition below.]\\\bottomrule
-\end{tabularx}\end{table}
+Foundation&Akerlof: information asymmetry; Simon: bounded decision-making and computational support.\\
+PS1&Reproduce the baseline mechanism and compare rule--information treatments.\\
+Next study&Test reputation response against the competing liquidity explanation with heterogeneous buyers.\\
+Longer term&Validate the mechanism with human participants and platform/ticketing data.\\
+2056&Design scalable rules and reputation systems that preserve trustworthy exchange without crowding out genuine consumers.\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \noindent\textbf{Expected 2056 Nobel Prize and Turing Award contribution statement.}
-By 2056, I aspire to be recognized for [theory, method or design] addressing [enduring human question] in [the current era's distinctive environment]. Building on [laureates and cited foundations], I will integrate [economics], [computer science] and [behavioral science] to advance [specific boundary]. Progress will be demonstrated by [milestones and evidence], with intellectual merits in [knowledge] and practical impacts for [people and institutions].
+By 2056, I aspire to contribute a theory and computational design framework for trustworthy and equitable digital markets, addressing trust, allocation, and participation under uncertainty. By integrating behavioral science on reputation responses, economics of financial constraints and allocation, and computer science simulation of platform mechanisms, I aim to identify designs that reduce speculation while preserving genuine access. Progress will be demonstrated through reproducible computation, behavioral tests, and field validation.
 
 \subsection*{Open Science Statement}
 \textbf{GitHub:} \GitHubLink\\
-\textbf{Google Colab:} \ColabLink\par
-[Identify available code, data or synthetic inputs, notebook, dependencies, outputs, release/commit and actual reuse terms. Give the shortest reproducible run instruction.]
+\textbf{Google Colab:} \ColabLink\\
+The release will contain the simulation code, dependencies, parameter settings, synthetic inputs, and actual outputs required to reproduce the computational analysis.
 
 \subsection*{Statement of Contribution to the UN's SDGs}
 \textbf{Hugging Face:} \DemoLink\\
-Through an open-access [tool], this project aims to support \textbf{SDG 4---Quality Education}~\cite{sdg4} by helping [audience] learn [concept] through [interaction]. [State access needs, learning instructions and a feasible evaluation.] Distinguish the resource released from benefits that remain to be evaluated.
-
-\subsection*{Submission milestones}
-First draft: September 13, 2026, 11:00 P.M. Beijing time (UTC+8). Class review: September 14. Proposed: rebuttal September 16 and revised submission September 20, both at 11:00 P.M. Update Appendix~\ref{app:abstract} with each reflection and revision.
-
+The open-access interactive game supports \textbf{SDG 4---Quality Education}~\cite{sdg4} by allowing learners to interact with the same reputation-information trade-off studied in the proposal. The tool is an educational artifact; learning gains remain to be evaluated.
