@@ -81,13 +81,13 @@ or real platform data.
 ## Links
 
 Paper:
-[Insert final PS1 PDF or repository link]
+[[Insert final PS1 PDF or repository link]](https://www.overleaf.com/read/ttmqthtyqsdh#a8d8b5)
 
 Google Colab:
-[Insert verified Colab URL]
+https://colab.research.google.com/drive/193R57-a-d-1RZOn3iszmP1Ya4X1AoBF2#scrollTo=2-20eTle3qXZ
 
 Hugging Face:
-[Insert verified Hugging Face Space URL]
+https://huggingface.co/spaces/dku-comsci-econ206-2026/Xuantong_Fu_Space
 
 ## Submitted Version
 
