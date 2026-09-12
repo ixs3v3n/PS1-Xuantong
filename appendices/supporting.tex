@@ -1,54 +1,62 @@
 \clearpage\nobalance
 \section*{Author Notes}
 \subsection*{Acknowledgements}
-I thank Prof. Luyao Zhang, Program Chair, and Prof. Ken Rogerson, Program Discussant, of the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held at Duke Kunshan University on September 7, 2026. I also thank [full name of teammate 1] and [full name of teammate 2], my teammates in [session number and full session title], and the rest of the COMSCI/ECON 206 Autumn 2026 Session 1 class for their questions and discussion. [Identify a specific contribution you actually used.] I am responsible for the proposal and remaining errors.
+I thank Prof. Luyao Zhang, Program Chair, and Prof. Ken Rogerson, Program Discussant, of the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held September 7, 2026 at Duke Kunshan University. I also thank Jiayang Sun and Zhenning Wang, my teammates in Week 3 session A, and the COMSCI/ECON 206 class for discussion and feedback. I am responsible for the proposal and remaining errors.
 \subsection*{Individual contribution}
-[State what you personally designed, implemented, wrote, checked, and adapted. Identify shared code or other contributions accurately. Program roles and feedback do not automatically imply coauthorship.]
+I developed the research question, interdisciplinary mechanism, proposal, computational design, and learning-tool concept. Any shared material or feedback is identified where used.
 
-\bibliographystyle{ACM-Reference-Format}\bibliography{references}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
 \appendix
 \section{Technical details and reproducibility}
-[Supply derivations, inputs, package versions, seed where relevant, actual outputs and limitations. Identify repository commit, notebook cells and demo version. Include the fresh-run record.]
-\subsection{AI-use disclosure}
-AI-Assisted drafting and debugging are permitted after initial independent reasoning. Initial reasoning and handwritten reflection are Human-Only. Record tool/model, date, purpose, significant prompts, accepted or rejected suggestions, human changes and verification. If none, state ``No generative AI was used.'' The human author is responsible for every claim, citation and computation.
+\textbf{Links and version.} Hugging Face: \DemoLink. GitHub: \GitHubLink. Colab: \ColabLink. Author: Xuantong Fu. Tested: [date], version [version/commit].
+
+\textbf{Mechanism.} Buyers face scarce goods under two rules: refundable/non-transferable versus transferable/non-refundable. Agents differ in income uncertainty and speculative participation. Reputation signals vary in reliability and visibility. Outcomes are purchase probability, surplus, speculation, and access by buyer type. The simulation resets from a documented parameter file and uses fixed seeds where stochasticity is introduced.
+
+\textbf{Compact rule.} For each treatment: initialize heterogeneous buyers and scarce supply $\rightarrow$ reveal rule and reputation information $\rightarrow$ buyers choose/submit bids or purchase decisions $\rightarrow$ allocate goods $\rightarrow$ record purchase, surplus, speculation, and access $\rightarrow$ repeat across demand/scarcity conditions.
+
+\textbf{Checks.} Boundary: zero speculative buyers and minimum demand. Typical: baseline demand, scarcity, and mixed buyer types. Invalid input: negative demand or an income probability outside $[0,1]$; the implementation rejects or normalizes invalid values rather than silently treating them as valid. Results from the Week 2 browser prototype are reported separately from future simulation results.
+
+\textbf{Responsible boundary.} The learning demo uses a static browser implementation only: no Hugging Face CPU/GPU runtime, backend, database, secret, API call, or paid service. Checks include desktop/mobile layout, keyboard interaction, readable labels, reset behavior, and invalid-input handling. Privacy is not collected or stored. Population-level behavioral claims remain unverified until larger experiments are conducted.
+
+\section{AI-assistance statement}
+I used ChatGPT (GPT-5.6 Luna) during September 2026 for bounded support with proposal structure, wording, computational-design discussion, and debugging of the browser prototype. I retained responsibility for the research question, disciplinary integration, hypotheses, treatment conditions, outcome measures, and final decisions. AI suggestions were treated as drafts: alternatives that were too broad, unsupported, or inconsistent with the intended mechanism were rejected or revised. I checked code behavior by running the game and checking transitions, locked choices, reset behavior, boundary/invalid inputs, and displayed calculations. I checked academic claims against the original papers and kept synthetic or pilot outputs separate from planned findings. AI output was not used as scholarly evidence.
 
 \section{Cumulative Intellectual Development}
-This proposal develops my Intellectual Statement II through the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held on September 7, 2026 at Duke Kunshan University, IB 2050. Program Chair: Prof. Luyao Zhang. Program Discussant: Prof. Ken Rogerson. My session: [number and full title]. My role: [assigned role]. My teammates: [full name 1] and [full name 2]. I acknowledge their contributions and the rest of the class's questions and discussion.
+This proposal develops my Intellectual Statement II through the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, September 7, 2026, Duke Kunshan University, IB 2050. Program Chair: Prof. Luyao Zhang. Program Discussant: Prof. Ken Rogerson. My session: A. Rethinking Reputation in Online Marketplaces. My role: Behavioral Scientist. My teammates: Jiayang Sun, Zhenning Wang.
 
-[Trace an earlier claim, a specific dated comment or piece of evidence, and the resulting revision with its intellectual consequence. Do not write only a chronological diary. Retain and revise the 2056 contribution statement.]
-
-Appendix~\ref{app:abstract} contains the structured abstract in the cumulative reflection format. Update its eight rows and preserve the prior version. The Expected 2056 Nobel Prize and Turing Award contribution statement in Section 5 must follow from the foundation, current-era boundary and interdisciplinary milestones.
+The earlier project focused mainly on how reputation information changes trust and transaction decisions. Peer discussion and field evidence motivated a broader question: trust is valuable, but platform rules and financial constraints can determine who actually receives scarce opportunities. I therefore added income uncertainty, speculation, and ticketing rules, changing the project from a reputation-only problem into a joint trust-and-access problem. [Add the exact dated peer comment and its source before submission.]
 
 \section{Field and open-source inspiration}
-The \emph{Joint Interdisciplinary Field Trip---Technology, Computation, Culture \& Society in Action} took place on September 4, 2026. Record your actual observations at \textbf{Tencent Shanghai Office} and \textbf{Shanghai Science and Technology Museum}. State attendance accurately.
+The \emph{Joint Interdisciplinary Field Trip---Technology, Computation, Culture \& Society in Action} took place September 4, 2026. The field evidence includes the Tencent Shanghai Office green-cloud-computing exhibit and the Shanghai Science and Technology Museum four-axis trainer. The photographs are retained with their captions and alt text from Week 2. The Tencent exhibit directly showed energy-efficiency and renewable-energy measures; my interpretation is that computational systems can change resource allocation at organizational scale. The museum exhibit directly showed an interactive aerospace-motion experience; my interpretation is that information and technology are partly effective through how people experience and understand them.
 
-[Retain one industry photograph and one public-sector photograph from the earlier assignment. Each caption gives exact site, September 4, 2026 visit date, photographer/source, activity or exhibit, and relevance. Distinguish observation from interpretation; connect each setting to an open-source inspiration, subsequent research, and proposed practical value. If you lacked first-hand access, identify an attributed alternative instead of claiming attendance.]
+The Week 2 open-source tools were Microsoft Recommenders and the CDC Measles Outbreak Simulator. Microsoft Recommenders motivated the partner-ranking/opportunity-concentration perspective; its recommendation focus limits direct transfer to the marketplace mechanism. The CDC simulator motivated interactive comparison of intervention conditions; its disease-specific assumptions limit direct transfer to market behavior. Official links, repositories, licenses, versions, and access dates are retained in the Week 2 supporting materials.
 
 \section{Review response and revision record}
-[Retain v1, both peer reviews, author rebuttal, reviewer follow-up and v2. Use the three review themes: strengths to retain, constructive concerns to address, and questions to clarify. Explain your decisions, changed locations and actual verification results. Justify any retained approach or deferred work.]
+\textbf{Strength retained:} the proposal keeps a concrete platform setting and a clear interdisciplinary mechanism.\\
+\textbf{Constructive concern addressed:} [insert actual peer criticism] led me to [insert actual revision].\\
+\textbf{Question clarified:} [insert actual peer question] led me to specify [mechanism, variable, or test].\\
+Future peer-review results will be added without replacing earlier versions.
 
 \clearpage\onecolumn
 \section{Structured abstract and cumulative proposal map}\label{app:abstract}
-Update this structured abstract with each cumulative reflection. Replace each prompt with a brief, concrete entry and retain earlier versions. The first seven rows summarize the research; the final row records feedback and revision. Detailed optional prompts are in the separate Scaffolding Companion.
-\par\medskip
 \begin{table}[H]
-\caption{Appendix E structured abstract template; retain the eight-row proposal structure.}
+\caption{Cumulative proposal map.}
 \label{tab:abstract-map}
 \renewcommand{\arraystretch}{1.18}
 \begin{tabularx}{\textwidth}{@{}p{0.27\textwidth}Y@{}}
 \toprule
 \textbf{Proposal element} & \textbf{Current statement / change} \\
 \midrule
-Background & State the strategic setting, established knowledge and unresolved issue. Cite the key foundation. \\
-Motivation and application & Explain why the issue matters now, the application scenario, affected people and the need the project addresses. \\
-Three connected questions & State one economics question, one computer-science question and one behavioral-science question. End with the integrated question that requires all three. \\
-Method and model assumptions & Specify players, actions or strategies, incentives, timing and information; then the model, baseline, computation and evidence needed. \\
-Results or expected results & State what was actually obtained and label its evidence type. Separately state expected results, the test and what finding would challenge the claim. \\
-Intellectual merits & Explain what is learned beyond the cited foundation and why integrating the three disciplines changes the answer. \\
-Practical impacts & Identify private- and public-sector value. Explain the open-access learning tool's intended contribution to SDG 4 and how its usefulness could be assessed. \\
-Feedback received and revision made & Name the dated feedback source, earlier claim, actual revision and intellectual consequence. Preserve prior versions; state accurately if feedback is pending. \\
+Background & Digital markets reduce transaction frictions, but reputation, rules, and financial constraints can jointly shape trust and access. \\
+Motivation and application & Scarce goods create a joint problem of information design, speculation, platform rules, and unequal purchasing capacity. \\
+Three connected questions & Economics studies income constraints; computation compares rule--signal combinations; behavior studies trust and action under uncertainty. \\
+Method and model assumptions & Heterogeneous-agent simulation with two ticketing rules, variable demand/scarcity/speculation, and reputation conditions. \\
+Results or expected results & The Week 2 game provides preliminary observed outputs; PS1 simulation results remain planned until reproduced in the notebook. \\
+Intellectual merits & The synthesis asks when information that improves trust can nevertheless worsen equitable access. \\
+Practical impacts & The framework can inform platform/ticketing design, while the open-access game supports SDG 4 learning. \\
+Feedback received and revision made & The project expanded from reputation-only decisions to the interaction of reputation, platform rules, speculation, and income uncertainty. \\
 \bottomrule
 \end{tabularx}
 \end{table}
-\noindent Keep field observations, photographs, literature notes, open-source inspirations and AI-use disclosure in the supporting sections. Distinguish observation, interpretation and proposed future evidence. The Open Science Statement groups GitHub and Colab; the Statement of Contribution to the UN's SDGs groups the Hugging Face learning tool.
-
