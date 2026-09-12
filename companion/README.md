@@ -93,7 +93,7 @@ https://huggingface.co/spaces/dku-comsci-econ206-2026/Xuantong_Fu_Space
 
 Submitted commit:
 
-`[INSERT FINAL COMMIT HASH]`
+`https://github.com/ixs3v3n/PS1-Xuantong`
 
 The submitted commit identifies the exact repository version associated with
 the PS1 submission.
