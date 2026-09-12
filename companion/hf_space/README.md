@@ -1,19 +1,93 @@
 ---
-title: COMSCI ECON 206 Strategic Reasoning Lab
-emoji: 🎲
+title: Online Marketplace Reputation Game
+emoji: 🛒
 colorFrom: blue
 colorTo: green
 sdk: static
 app_file: index.html
 pinned: false
 ---
-# Strategic Reasoning Lab
-COMSCI/ECON 206 · Week 3 · Instructor Luyao Zhang.
 
-Open `index.html` locally to play. To host after review, create a Hugging Face Space with the Static SDK, then upload this README, index.html and model.js at its root. No secrets, package installation, build command, backend or API calls are required. These files have not been published to a Space.
+# Online Marketplace Reputation Game
 
-The model is a simplified truncated logit cognitive hierarchy for a coordination game. It is an original classroom adaptation inspired by Jia et al., NeurIPS 2025, https://doi.org/10.52202/085713-1955 and Camerer, Ho & Chong, QJE 2004, https://doi.org/10.1162/0033553041502225. The baseline matrix follows Jia et al., Table 1(b); variations are teaching examples. Synthetic play is neither human-subject evidence nor a replication of the original LLM study.
+An interactive computational economics game exploring how different amounts of seller reputation information affect buyer bidding decisions.
 
-Companion: notebook 06 in the class repository. Run both at tau=1.5, gamma=1.2, Safe=5 to compare probabilities. No responses are transmitted or stored. Refreshing resets the pseudorandom sequence and local display.
+## Research Question
 
-The instructor will configure the final course repository and Space URLs. Official Static Space guide: https://huggingface.co/docs/hub/spaces-sdks-static
+How much reputation information is enough to support successful cooperation between unfamiliar users on an online marketplace?
+
+## Game Design
+
+The game contains three rounds. In each round, the player receives a new $100 budget and evaluates a different seller under three information conditions:
+
+- No History
+- Recent History
+- Full History
+
+The player must submit a maximum bid for all three conditions before any transaction result is revealed.
+
+The seller's asking price is hidden during the decision stage and is identical across the three information conditions within each round.
+
+## Information Conditions
+
+### No History
+
+No information about the seller's previous transactions is provided.
+
+### Recent History
+
+The player sees a short summary of the seller's recent transactions:
+
+- Successful transactions
+- Failed transactions
+
+### Full History
+
+The player sees a summary of the seller's complete transaction history.
+
+Full History contains substantially more observations than Recent History.
+
+## Transaction Rule
+
+A transaction occurs when:
+
+`Player Bid >= Seller Asking Price`
+
+Buyer surplus is:
+
+`True Product Value - Player Bid`
+
+when a transaction occurs.
+
+The seller's asking price is hidden until all three bids have been locked in.
+
+## Game Outputs
+
+After three rounds, the game reports:
+
+- Average bid
+- Trade rate
+- Average surplus
+
+for each information condition.
+
+## Technical Implementation
+
+This Space uses:
+
+- HTML
+- CSS
+- Client-side JavaScript
+
+It does not use:
+
+- Python
+- Backend servers
+- Databases
+- External APIs
+- API keys
+- Secrets
+- CPU/GPU runtimes
+- Paid services
+
+All calculations occur locally in the user's browser.
