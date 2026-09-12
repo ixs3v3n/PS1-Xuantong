@@ -81,7 +81,7 @@ or real platform data.
 ## Links
 
 Paper:
-[[Insert final PS1 PDF or repository link]](https://www.overleaf.com/read/ttmqthtyqsdh#a8d8b5)
+https://www.overleaf.com/read/ttmqthtyqsdh#a8d8b5
 
 Google Colab:
 https://colab.research.google.com/drive/193R57-a-d-1RZOn3iszmP1Ya4X1AoBF2#scrollTo=2-20eTle3qXZ
