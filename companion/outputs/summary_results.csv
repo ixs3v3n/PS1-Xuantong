@@ -1,0 +1,13 @@
+platform_rule,reputation,income_uncertainty,Genuine_Access_Rate,Speculation_Rate,Transaction_Rate,Average_Genuine_Surplus,Average_Bid
+Refundable + Non-transferable,Full History,High,0.397996,0.0,0.2781,15.654802,85.207434
+Refundable + Non-transferable,Full History,Low,0.419462,0.0,0.29335,16.706673,96.933348
+Refundable + Non-transferable,No History,High,0.361855,0.0,0.25315,15.062478,85.144175
+Refundable + Non-transferable,No History,Low,0.423845,0.0,0.29625,15.767605,96.960432
+Refundable + Non-transferable,Recent History,High,0.364777,0.000167,0.2536,15.34483,81.721652
+Refundable + Non-transferable,Recent History,Low,0.405432,0.0,0.2823,14.322427,92.940446
+Transferable + Non-refundable,Full History,High,0.033746,0.916045,0.2969,10.977041,96.303661
+Transferable + Non-refundable,Full History,Low,0.024771,0.937167,0.29915,7.956328,109.736515
+Transferable + Non-refundable,No History,High,0.028004,0.92981,0.2955,8.462088,96.434897
+Transferable + Non-refundable,No History,Low,0.019297,0.951667,0.29945,7.183353,110.076173
+Transferable + Non-refundable,Recent History,High,0.041123,0.897619,0.29105,13.468282,92.506348
+Transferable + Non-refundable,Recent History,Low,0.021288,0.946321,0.29985,6.310206,105.590412

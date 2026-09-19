@@ -1,0 +1,4 @@
+Metric,Refundable + Non-transferable,Transferable + Non-refundable,Difference (transferable - refundable)
+Genuine access rate,0.423845,0.019297,-0.404548
+Speculation rate,0.0,0.951667,0.951667
+Overall transaction rate,0.29625,0.29945,0.0032
