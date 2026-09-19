@@ -122,7 +122,7 @@ https://huggingface.co/spaces/dku-comsci-econ206-2026/Xuantong_Fu_Space
 
 Submitted commit:
 
-`[replace with the final v2 commit hash before submission]`
+`d33b4e3cbe5c23f764ab1f450ee6bf16c872df88`
 
 The submitted commit must identify the exact repository version associated with
 the v2 PS1 submission.
