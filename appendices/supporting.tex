@@ -15,13 +15,15 @@ Hugging Face: \url{https://huggingface.co/spaces/dku-comsci-econ206-2026/Xuanton
 GitHub: \url{https://github.com/ixs3v3n/PS1-Xuantong}.
 Colab: \url{https://colab.research.google.com/drive/193R57-a-d-1RZOn3iszmP1Ya4X1AoBF2}.
 Author: Xuantong Fu.
-Tested: September 2026, version [version/commit].
+Version: v2; final commit hash will be inserted before submission.
 
-\textbf{Mechanism.} Buyers face scarce goods under two rules: refundable/non-transferable versus transferable/non-refundable. Agents differ in income uncertainty and speculative participation. Reputation signals vary in reliability and visibility. Outcomes are purchase probability, surplus, speculation, and access by buyer type. The simulation resets from a documented parameter file and uses fixed seeds where stochasticity is introduced.
+\textbf{Mechanism.} Buyers face scarce goods under two rules: refundable/non-transferable versus transferable/non-refundable. Agents differ in income uncertainty and speculative participation. Reputation signals vary in reliability and visibility. Outcomes are purchase probability, surplus, speculation, and access by buyer type. The simulation uses a fixed seed and repeated rounds; the focused test fixes No History and Low income uncertainty before comparing the two rules.
 
-\textbf{Compact rule.} For each treatment: initialize heterogeneous buyers and scarce supply $\rightarrow$ reveal rule and reputation information $\rightarrow$ buyers choose/submit bids or purchase decisions $\rightarrow$ allocate goods $\rightarrow$ record purchase, surplus, speculation, and access $\rightarrow$ repeat across demand/scarcity conditions.
+\textbf{Focused test.} The main comparison uses 100 buyers, 30 goods, 200 rounds per condition, random seed 42, No History, and Low income uncertainty. Genuine access rate is genuine winners divided by genuine buyers; speculation rate is speculator winners divided by all winners; transaction rate is all winners divided by buyers. The saved baseline outputs are 42.38\% genuine access, 0\% speculation, and 29.63\% transaction rate for refundable/non-transferable, versus 1.93\%, 95.17\%, and 29.95\% for transferable/non-refundable.
 
-\textbf{Checks.} Boundary: zero speculative buyers and minimum demand. Typical: baseline demand, scarcity, and mixed buyer types. Invalid input: negative demand or an income probability outside $[0,1]$; the implementation rejects or normalizes invalid values rather than silently treating them as valid. Results from the Week 2 browser prototype are reported separately from future simulation results.
+\textbf{Compact rule.} For each treatment: initialize heterogeneous buyers and scarce supply $\rightarrow$ generate bids from buyer type, reputation, income uncertainty, and platform rule $\rightarrow$ generate the market asking price $\rightarrow$ allocate up to 30 goods to eligible highest bidders $\rightarrow$ record transaction, genuine access, speculation, and surplus $\rightarrow$ repeat for 200 rounds.
+
+\textbf{Checks.} Boundary: zero speculative buyers and minimum demand are conceptual boundary cases. Typical: baseline demand, scarcity, and mixed buyer types. Invalid input: negative demand or an income probability outside $[0,1]$; these are documented model boundaries, although the current notebook does not expose a user-input validation interface. The computational notebook additionally checks robustness at 10\%, 30\%, and 50\% speculator shares. Results from the Week 2 browser prototype are reported separately from the PS1 simulation.
 
 \textbf{Responsible boundary.} The learning demo uses a static browser implementation only: no Hugging Face CPU/GPU runtime, backend, database, secret, API call, or paid service. Checks include desktop/mobile layout, keyboard interaction, readable labels, reset behavior, and invalid-input handling. Privacy is not collected or stored. Population-level behavioral claims remain unverified until larger experiments are conducted.
 
@@ -31,7 +33,7 @@ I used ChatGPT (GPT-5.6 Luna) during September 2026 for bounded support with pro
 \section{Cumulative Intellectual Development}
 This proposal develops my Intellectual Statement II through the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, September 7, 2026, Duke Kunshan University, IB 2050. Program Chair: Prof. Luyao Zhang. Program Discussant: Prof. Ken Rogerson. My session: A. Rethinking Reputation in Online Marketplaces. My role: Behavioral Scientist. My teammates: Jiayang Sun, Zhenning Wang.
 
-The earlier project focused mainly on how reputation information changes trust and transaction decisions. Peer discussion and field evidence motivated a broader question: trust is valuable, but platform rules and financial constraints can determine who actually receives scarce opportunities. I therefore added income uncertainty, speculation, and ticketing rules, changing the project from a reputation-only problem into a joint trust-and-access problem. [Add the exact dated peer comment and its source before submission.]
+The earlier project focused mainly on how reputation information changes trust and transaction decisions. Peer discussion and field evidence motivated a broader question: trust is valuable, but platform rules and financial constraints can determine who actually receives scarce opportunities. I therefore added income uncertainty, speculation, and ticketing rules, changing the project from a reputation-only problem into a joint trust-and-access problem.
 
 \section{Field and open-source inspiration}
 The \emph{Joint Interdisciplinary Field Trip---Technology, Computation, Culture \& Society in Action} took place September 4, 2026. The field evidence includes the Tencent Shanghai Office green-cloud-computing exhibit and the Shanghai Science and Technology Museum four-axis trainer. The photographs are retained with their captions and alt text from Week 2. The Tencent exhibit directly showed energy-efficiency and renewable-energy measures; my interpretation is that computational systems can change resource allocation at organizational scale. The museum exhibit directly showed an interactive aerospace-motion experience; my interpretation is that information and technology are partly effective through how people experience and understand them.
@@ -39,10 +41,10 @@ The \emph{Joint Interdisciplinary Field Trip---Technology, Computation, Culture 
 The Week 2 open-source tools were Microsoft Recommenders and the CDC Measles Outbreak Simulator. Microsoft Recommenders motivated the partner-ranking/opportunity-concentration perspective; its recommendation focus limits direct transfer to the marketplace mechanism. The CDC simulator motivated interactive comparison of intervention conditions; its disease-specific assumptions limit direct transfer to market behavior. Official links, repositories, licenses, versions, and access dates are retained in the Week 2 supporting materials.
 
 \section{Review response and revision record}
-\textbf{Strength retained:} the proposal keeps a concrete platform setting and a clear interdisciplinary mechanism.\\
-\textbf{Constructive concern addressed:} [insert actual peer criticism] led me to [insert actual revision].\\
-\textbf{Question clarified:} [insert actual peer question] led me to specify [mechanism, variable, or test].\\
-Future peer-review results will be added without replacing earlier versions.
+\textbf{Strength retained:} Peer review confirmed that the project clearly connects platform rules, reputation information, and income uncertainty across economics, computation, and behavioral science. I retain this interdisciplinary structure.\\
+\textbf{Constructive concern addressed:} Peer review requested clearer, checkable evidence. I added a focused baseline test with fixed reputation and income uncertainty and report exact simulation parameters and outcomes.\\
+\textbf{Question clarified:} The question about distinguishing reduced speculation from reduced genuine participation led me to separate speculation rate, genuine-consumer access rate, and overall transaction rate.\\
+\textbf{Revision consequence:} I narrowed the computational claim to a testable comparison of transferable/non-refundable versus refundable/non-transferable rules. I retain broader reputation and uncertainty conditions as secondary analysis rather than presenting them as the main causal test.
 
 \clearpage\onecolumn
 \section{Structured abstract and cumulative proposal map}\label{app:abstract}
@@ -56,12 +58,12 @@ Future peer-review results will be added without replacing earlier versions.
 \midrule
 Background & Digital markets reduce transaction frictions, but reputation, rules, and financial constraints can jointly shape trust and access. \\
 Motivation and application & Scarce goods create a joint problem of information design, speculation, platform rules, and unequal purchasing capacity. \\
-Three connected questions & Economics studies income constraints; computation compares rule--signal combinations; behavior studies trust and action under uncertainty. \\
-Method and model assumptions & Heterogeneous-agent simulation with two ticketing rules, variable demand/scarcity/speculation, and reputation conditions. \\
-Results or expected results & The Week 2 game provides preliminary observed outputs; PS1 simulation results remain planned until reproduced in the notebook. \\
+Three connected questions & Economics studies income constraints; computation compares a focused rule treatment while behavior studies trust and action under uncertainty. \\
+Method and model assumptions & Heterogeneous-agent simulation with two ticketing rules, six reputation/income-uncertainty conditions, and a robustness check over speculator shares. \\
+Results or expected results & The focused computational comparison reports actual saved outputs; behavioral and population-level effects remain unverified. \\
 Intellectual merits & The synthesis asks when information that improves trust can nevertheless worsen equitable access. \\
 Practical impacts & The framework can inform platform/ticketing design, while the open-access game supports SDG 4 learning. \\
-Feedback received and revision made & The project expanded from reputation-only decisions to the interaction of reputation, platform rules, speculation, and income uncertainty. \\
+Feedback received and revision made & September 14 peer review led me to distinguish speculative crowding from genuine participation, narrow the computational hypothesis, and report exact parameters and baseline outcomes. \\
 \bottomrule
 \end{tabularx}
 \end{table}
