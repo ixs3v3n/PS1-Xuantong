@@ -157,9 +157,7 @@ https://github.com/ixs3v3n/PS1-Xuantong
 
 ### Submitted Commit
 
-`[replace with the final v2 commit hash before submission]`
-
-The submitted commit must identify the exact repository version associated with the v2 PS1 submission.
+`d33b4e3cbe5c23f764ab1f450ee6bf16c872df88`
 
 ## License and Reuse
 
